@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
 
 class MyInputField extends StatelessWidget {
+  final bool isPassField;
+  final String placeholder;
+  final String label;
+  final TextEditingController textEditingController;
   const MyInputField({
     Key? key,
+    required this.placeholder,
+    required this.textEditingController,
+    required this.label,
+    required this.isPassField,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.only(top: 20, right: 20, left: 20, bottom: 10),
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: const BorderRadius.only(
@@ -24,14 +32,16 @@ class MyInputField extends StatelessWidget {
           ]),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
+        children: [
           Text(
-            "Email",
-            style: TextStyle(fontSize: 25),
+            label,
+            style: const TextStyle(fontSize: 25),
           ),
           TextField(
+            obscureText: isPassField,
+            controller: textEditingController,
             decoration: InputDecoration(
-              hintText: "Email Address",
+              hintText: placeholder,
               border: InputBorder.none,
             ),
           )

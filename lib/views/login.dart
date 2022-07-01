@@ -10,6 +10,8 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  // TextEditingController emailController;
+  // TextEditingController passwordController;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +56,21 @@ class _LoginState extends State<Login> {
                   Column(
                     // ignore: prefer_const_literals_to_create_immutables
                     children: [
-                      const MyInputField(),
+                      MyInputField(
+                        label: "Email",
+                        placeholder: "Email Address",
+                        textEditingController: TextEditingController(),
+                        isPassField: false,
+                      ),
+                      const SizedBox(
+                        height: 40,
+                      ),
+                      MyInputField(
+                        label: "Password",
+                        placeholder: "Email Address",
+                        textEditingController: TextEditingController(),
+                        isPassField: true,
+                      ),
                     ],
                   ),
                   Row(
