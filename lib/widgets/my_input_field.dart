@@ -37,7 +37,7 @@ class MyInputField extends StatelessWidget {
             label,
             style: const TextStyle(fontSize: 25),
           ),
-          TextField(
+          TextFormField(
             obscureText: isPassField,
             controller: textEditingController,
             decoration: InputDecoration(
