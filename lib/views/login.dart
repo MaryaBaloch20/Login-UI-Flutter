@@ -68,7 +68,7 @@ class _LoginState extends State<Login> {
                   ),
                   MyInputField(
                     label: "Password",
-                    placeholder: "Email Address",
+                    placeholder: "Enter Password",
                     textEditingController: TextEditingController(),
                     isPassField: true,
                   ),
