@@ -102,14 +102,14 @@ class _signupState extends State<Signup> {
                       const SizedBox(height: 20),
                       MyInputField(
                         label: "Password",
-                        placeholder: "Enter new password",
+                        placeholder: "Enter New Password",
                         textEditingController: TextEditingController(),
                         isPassField: true,
                       ),
                       const SizedBox(height: 20),
                       MyInputField(
                         label: "Confirm Password",
-                        placeholder: "Re-enter your password",
+                        placeholder: "Re-enter Your Password",
                         textEditingController: TextEditingController(),
                         isPassField: true,
                       ),
