@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_ui_flutter/views/login.dart';
+import 'package:login_ui_flutter/views/signup.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Login(),
+      home: Signup(),
     );
   }
 }

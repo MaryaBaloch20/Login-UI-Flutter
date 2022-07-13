@@ -35,7 +35,7 @@ class MyInputField extends StatelessWidget {
         children: [
           Text(
             label,
-            style: const TextStyle(fontSize: 25),
+            style: const TextStyle(fontSize: 22),
           ),
           TextFormField(
             obscureText: isPassField,
