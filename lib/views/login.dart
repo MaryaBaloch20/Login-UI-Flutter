@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_ui_flutter/views/homepage.dart';
 import 'package:login_ui_flutter/views/signup.dart';
 
 import '../widgets/my_input_field.dart';
@@ -26,15 +27,15 @@ class _LoginState extends State<Login> {
                 color: Colors.black,
                 image: DecorationImage(
                     image: AssetImage(
-                      "images/Background.png",
+                      "images/backphoto.png",
                     ),
                     fit: BoxFit.cover)),
             child: const Center(
               child: Image(
                 image: AssetImage(
-                  "images/Logo.png",
+                  "images/MBlogo.png",
                 ),
-                width: 100,
+                width: 220,
               ),
             ),
           ),
@@ -80,8 +81,10 @@ class _LoginState extends State<Login> {
                         vertical: 20, horizontal: 120),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Signup()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Homepage()));
                       },
                       child: Container(
                         padding: const EdgeInsets.all(20),

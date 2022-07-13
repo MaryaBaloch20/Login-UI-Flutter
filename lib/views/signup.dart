@@ -26,7 +26,7 @@ class _signupState extends State<Signup> {
                 color: Colors.black,
                 image: DecorationImage(
                     image: AssetImage(
-                      "images/Background.png",
+                      "images/backphoto.png",
                     ),
                     fit: BoxFit.cover)),
             child: SafeArea(
