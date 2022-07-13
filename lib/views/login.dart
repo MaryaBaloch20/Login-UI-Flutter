@@ -47,31 +47,58 @@ class _LoginState extends State<Login> {
                 ),
               ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   const Text(
-                    "Login",
-                    style: TextStyle(fontSize: 32),
+                    "Welcome Back!",
+                    style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
                   ),
-                  Column(
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      MyInputField(
-                        label: "Email",
-                        placeholder: "Email Address",
-                        textEditingController: TextEditingController(),
-                        isPassField: false,
+                  const SizedBox(
+                    height: 60.0,
+                  ),
+                  MyInputField(
+                    label: "Email",
+                    placeholder: "Email Address",
+                    textEditingController: TextEditingController(),
+                    isPassField: false,
+                  ),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  MyInputField(
+                    label: "Password",
+                    placeholder: "Email Address",
+                    textEditingController: TextEditingController(),
+                    isPassField: true,
+                  ),
+                  const SizedBox(
+                    height: 30.0,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 20, horizontal: 120),
+                    child: GestureDetector(
+                      child: Container(
+                        padding: const EdgeInsets.all(20),
+                        decoration: const BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(16),
+                            bottomLeft: Radius.circular(16),
+                            bottomRight: Radius.circular(16),
+                          ),
+                        ),
+                        child: const Center(
+                          child: Text(
+                            "Login",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20.0),
+                          ),
+                        ),
                       ),
-                      const SizedBox(
-                        height: 40,
-                      ),
-                      MyInputField(
-                        label: "Password",
-                        placeholder: "Email Address",
-                        textEditingController: TextEditingController(),
-                        isPassField: true,
-                      ),
-                    ],
+                    ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -86,7 +113,21 @@ class _LoginState extends State<Login> {
                         style: TextStyle(fontSize: 18),
                       ),
                     ],
-                  )
+                  ),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.center,
+                  //   crossAxisAlignment: CrossAxisAlignment.center,
+                  //   children: const [
+                  //     Text(
+                  //       "Don't have an account? ",
+                  //       style: TextStyle(fontSize: 18),
+                  //     ),
+                  //     Text(
+                  //       "Sign Up",
+                  //       style: TextStyle(fontSize: 18),
+                  //     ),
+                  //   ],
+                  // )
                 ],
               ),
             ),
