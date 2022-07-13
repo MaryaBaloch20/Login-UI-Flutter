@@ -27,7 +27,7 @@ class MyInputField extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               blurRadius: 32,
-              color: Colors.black.withOpacity(.1),
+              color: Colors.black.withOpacity(.12),
             ),
           ]),
       child: Column(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_ui_flutter/views/login.dart';
 // import 'package:login_ui_flutter/views/signup.dart';
 
 import '../widgets/my_input_field.dart';
@@ -79,7 +80,7 @@ class _signupState extends State<Signup> {
                         textEditingController: TextEditingController(),
                         isPassField: false,
                       ),
-                      const SizedBox(height: 40),
+                      const SizedBox(height: 20),
                       MyInputField(
                         label: "Second Name",
                         placeholder: "eg. Baloch",
@@ -92,14 +93,14 @@ class _signupState extends State<Signup> {
                         textEditingController: TextEditingController(),
                         isPassField: false,
                       ),
-                      const SizedBox(height: 40),
+                      const SizedBox(height: 20),
                       MyInputField(
                         label: "Password",
                         placeholder: "Enter new password",
                         textEditingController: TextEditingController(),
                         isPassField: true,
                       ),
-                      const SizedBox(height: 40),
+                      const SizedBox(height: 20),
                       MyInputField(
                         label: "Confirm Password",
                         placeholder: "Re-enter your password",
@@ -133,6 +134,29 @@ class _signupState extends State<Signup> {
                             ),
                           ),
                         ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const Text(
+                            "Already have an account? ",
+                            style: TextStyle(fontSize: 18),
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Login()));
+                            },
+                            child: const Text(
+                              "Login Here",
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
