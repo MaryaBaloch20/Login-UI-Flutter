@@ -93,6 +93,7 @@ class _signupState extends State<Signup> {
                         textEditingController: TextEditingController(),
                         isPassField: false,
                       ),
+                      const SizedBox(height: 20),
                       MyInputField(
                         label: "Email",
                         placeholder: "Email Address",
