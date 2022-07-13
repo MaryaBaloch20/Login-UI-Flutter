@@ -34,11 +34,17 @@ class _signupState extends State<Signup> {
                   height: 100.0,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Icon(
-                        Icons.keyboard_arrow_left,
-                        size: 48,
-                        color: Colors.white,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Login()));
+                        },
+                        child: const Icon(
+                          Icons.keyboard_arrow_left,
+                          size: 48,
+                          color: Colors.white,
+                        ),
                       ),
                       Text(
                         "Sign Up",
@@ -112,7 +118,12 @@ class _signupState extends State<Signup> {
                         padding: const EdgeInsets.symmetric(
                             vertical: 20, horizontal: 120),
                         child: GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Login()));
+                          },
                           child: Container(
                             padding: const EdgeInsets.all(20),
                             decoration: const BoxDecoration(
