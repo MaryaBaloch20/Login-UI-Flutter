@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_ui_flutter/views/signup.dart';
 
 import '../widgets/my_input_field.dart';
 
@@ -78,6 +79,7 @@ class _LoginState extends State<Login> {
                     padding: const EdgeInsets.symmetric(
                         vertical: 20, horizontal: 120),
                     child: GestureDetector(
+                      onTap: () {},
                       child: Container(
                         padding: const EdgeInsets.all(20),
                         decoration: const BoxDecoration(
@@ -103,31 +105,26 @@ class _LoginState extends State<Login> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    children: const [
-                      Text(
+                    children: [
+                      const Text(
                         "Don't have an account? ",
                         style: TextStyle(fontSize: 18),
                       ),
-                      Text(
-                        "Sign Up",
-                        style: TextStyle(fontSize: 18),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Signup()));
+                        },
+                        child: const Text(
+                          "Sign Up",
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ],
                   ),
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.center,
-                  //   crossAxisAlignment: CrossAxisAlignment.center,
-                  //   children: const [
-                  //     Text(
-                  //       "Don't have an account? ",
-                  //       style: TextStyle(fontSize: 18),
-                  //     ),
-                  //     Text(
-                  //       "Sign Up",
-                  //       style: TextStyle(fontSize: 18),
-                  //     ),
-                  //   ],
-                  // )
                 ],
               ),
             ),
